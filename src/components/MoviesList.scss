@@ -7,6 +7,8 @@
     min-height: 100vh;
 }
 
+
+
 .selectedGenre {
     background-color: rgba($color: #000000, $alpha: 0.9);
     color: lightcyan;
@@ -19,6 +21,7 @@
     z-index: 1;
     cursor: pointer;
 }
+
 
 .movies {
     img {

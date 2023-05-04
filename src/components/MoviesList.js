@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 import "./MoviesList.scss";
 import Navbar from "./Navbar";
+// import Search from "./Search";
 import SingleMovie from "./SingleMovie";
 
 function MoviesList() {
@@ -66,14 +67,7 @@ function MoviesList() {
         ))}
         <button onClick={() => setSelectedGenre(null)}>All Genres</button>
       </div>
-      <div>
-        {/* <input
-          type="text"
-          value={searchTerm}
-          onChange={handleSearchTermChange}
-          placeholder="Search by title"
-        /> */}
-      </div>
+      <div></div>
       <div className="selectedGenre">{selectedGenre} Movies</div>
       <div className="movies">
         {filteredMovies.map((movie) => (
