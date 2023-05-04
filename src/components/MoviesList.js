@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import "./MoviesList.scss";
+import Navbar from "./Navbar";
+import SingleMovie from "./SingleMovie";
 
 function MoviesList() {
   const [movies, setMovies] = useState([]);
@@ -55,8 +57,8 @@ function MoviesList() {
 
   return (
     <div>
-      <h1>Movies List Page</h1>
-      <div>
+      <Navbar />
+      <div className="genre">
         {genres.map((genre) => (
           <button key={genre} onClick={() => handleGenreClick(genre)}>
             {genre}
@@ -65,21 +67,18 @@ function MoviesList() {
         <button onClick={() => setSelectedGenre(null)}>All Genres</button>
       </div>
       <div>
-        <input
+        {/* <input
           type="text"
           value={searchTerm}
           onChange={handleSearchTermChange}
           placeholder="Search by title"
-        />
+        /> */}
       </div>
+      <div className="selectedGenre">{selectedGenre} Movies</div>
       <div className="movies">
         {filteredMovies.map((movie) => (
           <div className="card" key={movie.slug}>
-            <Link to={`/movies/${movie.slug}`}>
-              <img src={movie.poster} alt={movie.title} />
-              <h2>{movie.title}</h2>
-              {/* <p>{movie.genres.join(", ")}</p> */}
-            </Link>
+            <SingleMovie movie={movie} />
           </div>
         ))}
       </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import MovieDetailsPage from "./components/MovieDetailsPage";
 import Login from "./components/Login";
 import MoviesList from "./components/MoviesList";
+import Navbar from "./components/Navbar";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
@@ -22,14 +23,14 @@ function App() {
     <Router>
       <div>
         <nav>
-          <ul>
-            <li>{/* <Link to="/">Home</Link> */}</li>
+          {/* <ul>
+            <li><Navbar /></li>
             {token && (
               <li>
                 <button onClick={handleLogout}>Logout</button>
               </li>
             )}
-          </ul>
+          </ul> */}
         </nav>
         <Routes>
           <Route path="/movies" element={<MoviesList />} />
