@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "./MoviesList.scss";
 
 function MoviesList() {
   const [movies, setMovies] = useState([]);
@@ -73,11 +74,11 @@ function MoviesList() {
       </div>
       <div className="movies">
         {filteredMovies.map((movie) => (
-          <div key={movie.slug}>
+          <div className="card" key={movie.slug}>
             <Link to={`/movies/${movie.slug}`}>
               <img src={movie.poster} alt={movie.title} />
               <h2>{movie.title}</h2>
-              <p>{movie.genres.join(", ")}</p>
+              {/* <p>{movie.genres.join(", ")}</p> */}
             </Link>
           </div>
         ))}
