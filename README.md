@@ -68,3 +68,172 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+.navigation {
+height: 60px;
+width: 100%;
+display: flex;
+align-items: center;
+position: relative;
+padding: 0.5rem 0rem;
+background-color: rgba($color: #000000, $alpha: 0.7);
+color: black;
+box-shadow: 0 2px 2px 2px rgba(9, 9, 9, 0.23);
+z-index: 10;
+}
+
+.searchinput {
+padding: 4px 10px;
+border-radius: 6px;
+border: navajowhite;
+color: white;
+background-color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.navigation button {
+text-transform: uppercase;
+padding: 4px 14px;
+border: navajowhite;
+color: white;
+background-color: rgb(40, 148, 203, 0.9);
+}
+
+.brand-name {
+text-decoration: none;
+color: lightblue;
+font-size: 1.3rem;
+margin-left: 1rem;
+font-size: 25px;
+}
+
+.navigation-menu {
+margin-left: auto;
+}
+
+.navigation-menu ul {
+display: flex;
+padding: 0;
+}
+
+.navigation-menu li {
+
+    list-style-type: none;
+    margin: 0 1rem;
+
+}
+
+.navigation-menu li a {
+
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: lightcyan;
+
+}
+
+.hamburger {
+
+    width: 40px;
+
+    cursor: pointer;
+
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    transform: translateY(-50%);
+    display: none;
+
+}
+
+// @media screen and (max-width: 768px) {
+// .hamburger {
+// display: block;
+// }
+
+// .navigation-menu ul {
+// display: none;
+
+// }
+
+// .navigation-menu ul {
+// // navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar)
+// position: absolute;
+// top: 60px;
+// left: 0;
+// // stacks the li tags vertically
+// flex-direction: column;
+// // makes menu span full height and width
+// width: 100%;
+// height: calc(100vh - 77px);
+// // background-color: white;
+// border-top: 1px solid black;
+// background-color: black;
+
+// }
+
+// .navigation-menu li {
+// // centers link text and strips off margin
+// text-align: center;
+// margin: 0;
+
+// }
+
+// .navigation-menu li a {
+// color: black;
+// // increases the surface area of the anchor tag to span the full width of the menu
+// width: 100%;
+// padding: 1.5rem 0;
+// color: white;
+// }
+
+// .navigation-menu li:hover {
+// background-color: #111111;
+// }
+// }
+
+@media screen and (max-width: 768px) {
+.navigation-menu ul {
+// navigation menu is positioned to start 60px from the top of the document (which is directly below the navbar)
+position: absolute;
+top: 60px;
+left: 0;
+// stacks the li tags vertically
+flex-direction: column;
+// makes menu span full height and width
+width: 100%;
+height: calc(100vh - 77px);
+background-color: white;
+border-top: 1px solid black;
+}
+
+    .navigation-menu li {
+        // centers link text and strips off margin
+        text-align: center;
+        margin: 0;
+    }
+
+    .navigation-menu li a {
+        color: black;
+        // increases the surface area of the anchor tag to span the full width of the menu
+        width: 100%;
+        padding: 1.5rem 0;
+    }
+
+    .navigation-menu li:hover {
+        background-color: #eee;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+.navigation-menu ul {
+/_ previous styles _/
+display: none;
+}
+}
+
+@media screen and (max-width: 768px) {
+.navigation-menu.expanded ul {
+display: block;
+}
+}
