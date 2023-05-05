@@ -7,8 +7,8 @@ function Login() {
   const [userInfo, setUserInfo] = useState({
     username: "",
     password: "",
-    load: false,
-    success: false,
+    // load: false,
+    // success: false,
   });
   const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();

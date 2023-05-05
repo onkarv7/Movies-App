@@ -10,6 +10,7 @@ body {
 }
 
 .logincontainer {
+
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -22,11 +23,24 @@ body {
     border: 1px solid lightgray;
 }
 
+.logincontainer h1 {
+    margin-top: 50px;
+    font-weight: 700;
+}
+
+.logincontainer h3 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: grey;
+
+}
+
 .form {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
     gap: 20px;
+
 }
 
 .form {
@@ -57,6 +71,7 @@ body {
         cursor: pointer;
         padding: 15px;
         border: 1px solid gray;
+        font-weight: 700;
     }
 }
 
