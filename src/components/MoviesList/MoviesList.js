@@ -64,7 +64,7 @@ function MoviesList() {
             {genre}
           </button>
         ))}
-        <button onClick={() => setSelectedGenre(null)}>All Genres</button>
+        <button onClick={() => setSelectedGenre(null)}>All Movies</button>
       </div>
       <div></div>
       <div className="selectedGenre">{selectedGenre} Movies</div>

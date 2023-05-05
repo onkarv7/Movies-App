@@ -30,6 +30,9 @@ function Login() {
       const token = "Wookie2019";
       localStorage.setItem("token", token);
       navigate("/movies");
+      enqueueSnackbar(`Welcome ${userInfo["username"]} Enjoy Wookie`, {
+        variant: "success",
+      });
     } else {
       // enqueueSnackbar("error while login");
     }
