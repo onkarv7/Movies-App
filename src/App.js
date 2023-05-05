@@ -1,10 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState } from "react";
-
-import MovieDetailsPage from "./components/MovieDetailsPage";
-import Login from "./components/Login";
-import MoviesList from "./components/MoviesList";
-import Navbar from "./components/Navbar";
+//custom imports
+import MovieDetailsPage from "./components/MovieDetailsPage/MovieDetailsPage";
+import Login from "./components/Login/Login";
+import MoviesList from "./components/MoviesList/MoviesList";
 
 function App() {
   const [token, setToken] = useState(localStorage.getItem("token"));
@@ -34,7 +33,7 @@ function App() {
         </nav>
         <Routes>
           <Route path="/movies" element={<MoviesList />} />
-          <Route path="/" element={<Login onLogin={handleLogin} />} />
+          <Route exact path="/" element={<Login onLogin={handleLogin} />} />
           <Route
             path="/movies/:slug"
             element={<MovieDetailsPage token={token} />}

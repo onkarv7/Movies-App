@@ -1,0 +1,130 @@
+.moviedetailswrapper {
+    background-color: rgba($color: #000000, $alpha: 0.8);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.moviedetailswrapper h1 {
+    color: rgb(40, 148, 203, 0.9);
+}
+
+.moviedetails {
+    display: flex;
+    gap: 30px;
+    margin: 50px 0px 0px 80px;
+}
+
+.description span {
+    color: grey;
+}
+
+.description p {
+    color: rgb(40, 148, 203, 0.9);
+}
+
+.imdbcontainer {
+    display: flex;
+    gap: 40px;
+}
+
+.imdb {
+    color: #f79702 !important;
+}
+
+.description :nth-child(3) {
+    width: 800px;
+}
+
+.description :nth-child(4) {
+    display: flex;
+    gap: 200px;
+}
+
+.side {
+    color: grey;
+    margin: 40px 0px 0px 80px;
+    font-size: 16px;
+}
+
+.side button {
+    color: grey;
+    padding: 0;
+    background: 0;
+    border-style: none;
+    font-size: 16px;
+    // margin: 40px 0px 0px 40px;
+}
+
+.side :nth-child(3) {
+    color: rgb(40, 148, 203, 0.9);
+}
+
+
+@media screen and (max-width: 425px) {
+    .moviedetails img {
+        width: 150px;
+        height: 370px;
+        object-fit: contain;
+    }
+
+    .description :nth-child(3) {
+        width: 250px;
+    }
+
+    .description :nth-child(4) {
+        display: flex;
+        gap: 15px;
+    }
+
+    .moviedetails {
+        display: flex;
+        gap: 10px;
+        margin: 40px 0px 0px 0px;
+    }
+}
+
+@media only screen and (max-width: 824px) and (min-width: 480px) {
+
+    .moviedetails img {
+        width: 300px;
+        height: 470px;
+    }
+
+    .description :nth-child(3) {
+        width: 370px;
+    }
+
+    .description :nth-child(4) {
+
+        gap: 20px;
+    }
+
+    .moviedetails {
+        gap: 40px;
+        margin: 100px 0px 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 300px) {
+    .moviedetails img {
+        width: 120px;
+        height: 300px;
+        object-fit: contain;
+    }
+
+    .description :nth-child(3) {
+        width: 150px;
+    }
+
+    .description :nth-child(4) {
+        gap: 15px;
+    }
+
+    .moviedetails {
+        margin: 40px 0px 0px 0px;
+    }
+
+    .moviedetailswrapper {
+        font-size: 10px;
+    }
+}

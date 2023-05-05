@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
-
-import "./MoviesList.scss";
-import Navbar from "./Navbar";
-// import Search from "./Search";
+//custom components
+import Navbar from "../Navbar/Navbar";
 import SingleMovie from "./SingleMovie";
+import "./MoviesList.scss";
 
 function MoviesList() {
   const [movies, setMovies] = useState([]);

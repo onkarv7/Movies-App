@@ -14,7 +14,11 @@ export default function Navbar() {
           setIsNavExpanded(!isNavExpanded);
         }}
       >
-        <img className="hamburger" src={require("../Assets/menu.png")} alt="" />
+        <img
+          className="hamburger"
+          src={require("../../Assets/menu.png")}
+          alt=""
+        />
       </div>
       <div
         className={
@@ -42,6 +46,7 @@ export default function Navbar() {
           </li>
           <li>
             <input
+              className="searchinput"
               type="text"
               //   value={searchTerm}
               //   onChange={handleSearchTermChange}
